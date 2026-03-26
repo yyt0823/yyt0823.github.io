@@ -15,11 +15,11 @@
     }
 
     :root {
-      --bg: #0f0f0f;
-      --text: #e8e6e3;
-      --muted: #8b8685;
+      --bg: #ffffff;
+      --text: #111111;
+      --muted: #888888;
       --accent: #c9a227;
-      --border: #1e1e1e;
+      --border: #e8e8e8;
     }
 
     body {
@@ -27,86 +27,124 @@
       background: var(--bg);
       color: var(--text);
       min-height: 100vh;
-      padding: 3.5rem 2rem;
+      padding: 3rem 1.5rem;
       line-height: 1.6;
     }
 
     main {
-      max-width: 48rem;
+      max-width: 760px;
       margin: 0 auto;
     }
 
     /* Header */
     .hero {
-      margin-bottom: 4rem;
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 2px solid var(--text);
     }
 
     .hero h1 {
-      font-size: clamp(2.5rem, 6vw, 3.5rem);
+      font-size: clamp(2rem, 5vw, 3rem);
       font-weight: 600;
       letter-spacing: -0.02em;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.4rem;
     }
 
     .hero .tagline {
       color: var(--muted);
-      font-size: 1.05rem;
+      font-size: 0.95rem;
+    }
+
+    .hero .tagline a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .hero .tagline a:hover {
+      color: var(--text);
     }
 
     /* Sections */
     section {
-      margin-bottom: 3.5rem;
+      margin-bottom: 2.75rem;
     }
 
     section h2 {
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       font-weight: 600;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 1.5rem;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
     }
 
-    /* Education & Experience entries */
+    /* Entry rows */
     .entry {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      gap: 1.5rem;
+      gap: 1rem;
+      margin-bottom: 1.75rem;
     }
 
-    .entry + .entry {
-      margin-top: 1.5rem;
+    .entry:last-child {
+      margin-bottom: 0;
+    }
+
+    .entry .left {
+      flex: 1;
     }
 
     .entry .title {
       font-weight: 600;
-      font-size: 1rem;
+      font-size: 0.97rem;
     }
 
-    .entry .subtitle {
+    .entry .role {
+      font-size: 0.88rem;
       color: var(--muted);
-      font-size: 0.9rem;
-      margin-top: 0.2rem;
+      font-style: italic;
+      margin-top: 0.1rem;
     }
 
     .entry .meta {
-      color: var(--accent);
       font-size: 0.82rem;
-      margin-top: 0.25rem;
+      color: var(--accent);
+      margin-top: 0.15rem;
     }
 
-    .entry .period {
-      color: var(--muted);
-      font-size: 0.85rem;
-      white-space: nowrap;
+    .entry .right {
+      text-align: right;
       flex-shrink: 0;
-      padding-top: 0.1rem;
+    }
+
+    .entry .right .location {
+      font-size: 0.88rem;
+      font-weight: 500;
+    }
+
+    .entry .right .period {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 0.1rem;
+    }
+
+    .bullets {
+      margin-top: 0.6rem;
+      padding-left: 1.1rem;
+      font-size: 0.87rem;
+      color: #444;
+    }
+
+    .bullets li {
+      margin-bottom: 0.3rem;
     }
 
     /* Fields */
     .field-entry {
-      padding: 1.5rem 0;
+      padding: 1.25rem 0;
       border-bottom: 1px solid var(--border);
     }
 
@@ -120,46 +158,45 @@
     }
 
     .field-entry h3 {
-      font-size: 1rem;
+      font-size: 0.95rem;
       font-weight: 600;
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.3rem;
     }
 
     .field-entry .courses {
       color: var(--muted);
-      font-size: 0.83rem;
-      margin-bottom: 0.85rem;
+      font-size: 0.8rem;
+      margin-bottom: 0.7rem;
     }
 
     .repos {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.45rem;
+      gap: 0.4rem;
     }
 
     .repo-link {
       color: var(--accent);
       text-decoration: none;
-      font-size: 0.8rem;
-      padding: 0.22rem 0.6rem;
-      border: 1px solid #2a2318;
-      border-radius: 4px;
-      background: #150f04;
+      font-size: 0.78rem;
+      padding: 0.2rem 0.55rem;
+      border: 1px solid #e8d9a8;
+      border-radius: 3px;
+      background: #fdf8ec;
       transition: border-color 0.15s, background 0.15s;
     }
 
     .repo-link:hover {
       border-color: var(--accent);
-      background: #1e1508;
-      text-decoration: none;
+      background: #f7efd0;
     }
 
     /* Footer */
     footer {
-      margin-top: 4rem;
-      padding-top: 1.5rem;
+      margin-top: 3rem;
+      padding-top: 1.25rem;
       border-top: 1px solid var(--border);
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       color: var(--muted);
       display: flex;
       justify-content: space-between;
@@ -181,31 +218,62 @@
   <main>
     <header class="hero">
       <h1>Yantian Yin</h1>
-      <p class="tagline">CS Honours @ McGill &nbsp;·&nbsp; Graphics &nbsp;·&nbsp; Systems &nbsp;·&nbsp; ML</p>
+      <p class="tagline">
+        Montreal &nbsp;·&nbsp;
+        <a href="mailto:yantian.yin@mail.mcgill.ca">yantian.yin@mail.mcgill.ca</a> &nbsp;·&nbsp;
+        <a href="https://github.com/yyt0823">github.com/yyt0823</a>
+      </p>
     </header>
 
     <section id="education">
       <h2>Education</h2>
       <div class="entry">
-        <div>
+        <div class="left">
           <div class="title">McGill University</div>
-          <div class="subtitle">B.Sc. Honours Computer Science</div>
-          <div class="meta">GPA 3.60 / 4.00</div>
+          <div class="role">B.Sc. Honours Computer Science</div>
+          <div class="meta">GPA 3.7+ / 4.0</div>
         </div>
-        <div class="period">2023 — present</div>
+        <div class="right">
+          <div class="location">Montreal, Canada</div>
+          <div class="period">2023 — April 2027</div>
+        </div>
       </div>
     </section>
 
     <section id="experience">
-      <h2>Experience</h2>
+      <h2>Internship</h2>
+
       <div class="entry">
-        <div>
-          <!-- Update company name and role below -->
-          <div class="title">Company Name</div>
-          <div class="subtitle">Software Engineering Intern</div>
-          <div class="meta">Industrial Practicum · McGill FSCI 200</div>
+        <div class="left">
+          <div class="title">Tencent</div>
+          <div class="role">Tencent Cloud Business & Product Trainee (Key Account)</div>
+          <ul class="bullets">
+            <li>Analyzed AI companies with high compute demand and built targeted outreach strategies</li>
+            <li>Proposed cost-optimization solutions (GPU pricing, SaaS/PaaS adoption) for startups and enterprises</li>
+            <li>Organized networking sessions and facilitated meetings with enterprise and government stakeholders</li>
+            <li>Led a government PoC end-to-end: defined requirements, built demo environments, and presented solutions</li>
+          </ul>
         </div>
-        <div class="period">Summer 2025</div>
+        <div class="right">
+          <div class="location">Shenzhen, China</div>
+          <div class="period">Jun – Sep 2025</div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="left">
+          <div class="title">Campango</div>
+          <div class="role">Software Developer</div>
+          <ul class="bullets">
+            <li>Identified performance bottlenecks caused by repeated Firestore queries for post retrieval</li>
+            <li>Designed and implemented an in-memory caching layer with TTL to reduce redundant database access</li>
+            <li>Conducted testing and debugging to ensure correctness and reliability of backend functionalities</li>
+          </ul>
+        </div>
+        <div class="right">
+          <div class="location"></div>
+          <div class="period"></div>
+        </div>
       </div>
     </section>
 
@@ -233,7 +301,7 @@
 
       <div class="field-entry">
         <h3>Systems &amp; Operating Systems</h3>
-        <div class="courses">COMP 206 Intro to Software Systems &nbsp;·&nbsp; COMP 273 Intro to Computer Systems &nbsp;·&nbsp; COMP 310 Operating Systems</div>
+        <div class="courses">COMP 206 Software Systems &nbsp;·&nbsp; COMP 273 Computer Systems &nbsp;·&nbsp; COMP 310 Operating Systems</div>
         <div class="repos">
           <a class="repo-link" href="https://github.com/yyt0823/os">os</a>
           <a class="repo-link" href="https://github.com/yyt0823/MIPS">MIPS</a>
@@ -271,8 +339,8 @@
     </section>
 
     <footer>
-      <a href="https://github.com/yyt0823">github.com/yyt0823</a>
       <span>yyt.email</span>
+      <span>Yantian Yin</span>
     </footer>
   </main>
 </body>
