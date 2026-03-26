@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hello</title>
+  <title>Yantian Yin</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -19,6 +19,7 @@
       --text: #e8e6e3;
       --muted: #8b8685;
       --accent: #c9a227;
+      --border: #1e1e1e;
     }
 
     body {
@@ -26,56 +27,253 @@
       background: var(--bg);
       color: var(--text);
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
+      padding: 3.5rem 2rem;
       line-height: 1.6;
     }
 
     main {
-      max-width: 36rem;
-      text-align: center;
+      max-width: 48rem;
+      margin: 0 auto;
     }
 
-    h1 {
-      font-size: clamp(2rem, 5vw, 3rem);
+    /* Header */
+    .hero {
+      margin-bottom: 4rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 3.5rem);
       font-weight: 600;
       letter-spacing: -0.02em;
       margin-bottom: 0.5rem;
     }
 
-    .subtitle {
+    .hero .tagline {
       color: var(--muted);
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
+      font-size: 1.05rem;
     }
 
-    a {
+    /* Sections */
+    section {
+      margin-bottom: 3.5rem;
+    }
+
+    section h2 {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
       color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    /* Education & Experience entries */
+    .entry {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
+
+    .entry + .entry {
+      margin-top: 1.5rem;
+    }
+
+    .entry .title {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .entry .subtitle {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: 0.2rem;
+    }
+
+    .entry .meta {
+      color: var(--accent);
+      font-size: 0.82rem;
+      margin-top: 0.25rem;
+    }
+
+    .entry .period {
+      color: var(--muted);
+      font-size: 0.85rem;
+      white-space: nowrap;
+      flex-shrink: 0;
+      padding-top: 0.1rem;
+    }
+
+    /* Fields */
+    .field-entry {
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .field-entry:first-child {
+      padding-top: 0;
+    }
+
+    .field-entry:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .field-entry h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+
+    .field-entry .courses {
+      color: var(--muted);
+      font-size: 0.83rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .repos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    .repo-link {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.8rem;
+      padding: 0.22rem 0.6rem;
+      border: 1px solid #2a2318;
+      border-radius: 4px;
+      background: #150f04;
+      transition: border-color 0.15s, background 0.15s;
+    }
+
+    .repo-link:hover {
+      border-color: var(--accent);
+      background: #1e1508;
       text-decoration: none;
     }
 
-    a:hover {
-      text-decoration: underline;
+    /* Footer */
+    footer {
+      margin-top: 4rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
     }
 
-    footer {
-      margin-top: 3rem;
-      font-size: 0.9rem;
+    footer a {
       color: var(--muted);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--text);
     }
   </style>
 </head>
 <body>
   <main>
-    <h1>Hello.</h1>
-    <p class="subtitle">A simple wakbjdkajsbdkjwbakebsite.</p>
-    <p>Edit <code>index.html</code> to make it yours.</p>
+    <header class="hero">
+      <h1>Yantian Yin</h1>
+      <p class="tagline">CS Honours @ McGill &nbsp;·&nbsp; Graphics &nbsp;·&nbsp; Systems &nbsp;·&nbsp; ML</p>
+    </header>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="entry">
+        <div>
+          <div class="title">McGill University</div>
+          <div class="subtitle">B.Sc. Honours Computer Science</div>
+          <div class="meta">GPA 3.60 / 4.00</div>
+        </div>
+        <div class="period">2023 — present</div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="entry">
+        <div>
+          <!-- Update company name and role below -->
+          <div class="title">Company Name</div>
+          <div class="subtitle">Software Engineering Intern</div>
+          <div class="meta">Industrial Practicum · McGill FSCI 200</div>
+        </div>
+        <div class="period">Summer 2025</div>
+      </div>
+    </section>
+
+    <section id="fields">
+      <h2>Fields</h2>
+
+      <div class="field-entry">
+        <h3>Computer Graphics</h3>
+        <div class="courses">COMP 557 Fundamentals of Computer Graphics</div>
+        <div class="repos">
+          <a class="repo-link" href="https://github.com/yyt0823/Ray-Tracer-Taichi">Ray-Tracer-Taichi</a>
+          <a class="repo-link" href="https://github.com/yyt0823/Shadow-Mapping-OpenGL-Renderer">Shadow-Mapping-OpenGL-Renderer</a>
+          <a class="repo-link" href="https://github.com/yyt0823/Mesh-Simplification-Half-Edge-QEM">Mesh-Simplification-Half-Edge-QEM</a>
+          <a class="repo-link" href="https://github.com/yyt0823/3D-Rotation-Controllers">3D-Rotation-Controllers</a>
+        </div>
+      </div>
+
+      <div class="field-entry">
+        <h3>Game Development</h3>
+        <div class="courses">COMP 521 Modern Computer Games</div>
+        <div class="repos">
+          <a class="repo-link" href="https://github.com/yyt0823/games">games</a>
+        </div>
+      </div>
+
+      <div class="field-entry">
+        <h3>Systems &amp; Operating Systems</h3>
+        <div class="courses">COMP 206 Intro to Software Systems &nbsp;·&nbsp; COMP 273 Intro to Computer Systems &nbsp;·&nbsp; COMP 310 Operating Systems</div>
+        <div class="repos">
+          <a class="repo-link" href="https://github.com/yyt0823/os">os</a>
+          <a class="repo-link" href="https://github.com/yyt0823/MIPS">MIPS</a>
+          <a class="repo-link" href="https://github.com/yyt0823/CMD-BASH">CMD-BASH</a>
+        </div>
+      </div>
+
+      <div class="field-entry">
+        <h3>Concurrent Programming</h3>
+        <div class="courses">COMP 409 Concurrent Programming</div>
+        <div class="repos">
+          <a class="repo-link" href="https://github.com/yyt0823/Concurrent-Programming-Multithreaded-Image-Composer-and-LinkedList">Concurrent-Programming</a>
+        </div>
+      </div>
+
+      <div class="field-entry">
+        <h3>Programming Languages &amp; Logic</h3>
+        <div class="courses">COMP 302 Programming Languages &amp; Paradigms &nbsp;·&nbsp; COMP 527 Logic and Computation &nbsp;·&nbsp; COMP 330 Theory of Computation</div>
+        <div class="repos">
+          <a class="repo-link" href="https://github.com/yyt0823/Functional-Programming">Functional-Programming</a>
+          <a class="repo-link" href="https://github.com/yyt0823/comp527-extension-of-Intuitionistic-logic">comp527-Intuitionistic-logic</a>
+          <a class="repo-link" href="https://github.com/yyt0823/JAVA">JAVA</a>
+        </div>
+      </div>
+
+      <div class="field-entry">
+        <h3>Machine Learning</h3>
+        <div class="courses">COMP 551 Applied Machine Learning</div>
+        <div class="repos">
+          <a class="repo-link" href="https://github.com/yyt0823/CNN_ODD_ONE_OUT">CNN_ODD_ONE_OUT</a>
+          <a class="repo-link" href="https://github.com/yyt0823/Logistic-Regression-Spam-Classifier">Logistic-Regression-Spam-Classifier</a>
+        </div>
+      </div>
+
+    </section>
+
+    <footer>
+      <a href="https://github.com/yyt0823">github.com/yyt0823</a>
+      <span>yyt.email</span>
+    </footer>
   </main>
-  <footer>
-    <p>yyt0823.github.io</p>
-  </footer>
 </body>
 </html>
