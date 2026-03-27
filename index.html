@@ -146,9 +146,6 @@
     .field-entry {
       padding: 1.25rem 0;
       border-bottom: 1px solid var(--border);
-      display: flex;
-      gap: 1.25rem;
-      align-items: flex-start;
     }
 
     .field-entry:first-child {
@@ -158,11 +155,6 @@
     .field-entry:last-child {
       border-bottom: none;
       padding-bottom: 0;
-    }
-
-    .field-body {
-      flex: 1;
-      min-width: 0;
     }
 
     .field-entry h3 {
@@ -177,17 +169,20 @@
       margin-bottom: 0.7rem;
     }
 
-    .field-gif {
-      flex-shrink: 0;
-      width: 140px;
-      border-radius: 4px;
-      overflow: hidden;
-      border: 1px solid var(--border);
+    .field-gifs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.75rem;
     }
 
-    .field-gif img {
-      width: 100%;
+    .field-gifs img {
+      height: 90px;
+      width: auto;
+      border-radius: 4px;
+      border: 1px solid var(--border);
       display: block;
+      object-fit: cover;
     }
 
     .repos {
@@ -353,106 +348,97 @@
       <h2>Fields</h2>
 
       <div class="field-entry">
-        <div class="field-body">
-          <h3>Computer Graphics</h3>
-          <div class="courses">COMP 557 Fundamentals of Computer Graphics</div>
-          <div class="repos">
-            <a class="repo-link" href="https://github.com/yyt0823/Ray-Tracer-Taichi">Ray-Tracer-Taichi</a>
-            <a class="repo-link" href="https://github.com/yyt0823/Shadow-Mapping-OpenGL-Renderer">Shadow-Mapping-OpenGL-Renderer</a>
-            <a class="repo-link" href="https://github.com/yyt0823/Mesh-Simplification-Half-Edge-QEM">Mesh-Simplification-Half-Edge-QEM</a>
-            <a class="repo-link" href="https://github.com/yyt0823/3D-Rotation-Controllers">3D-Rotation-Controllers</a>
-          </div>
+        <h3>Computer Graphics</h3>
+        <div class="courses">COMP 557 Fundamentals of Computer Graphics</div>
+        <div class="repos">
+          <a class="repo-link" href="https://github.com/yyt0823/Ray-Tracer-Taichi">Ray-Tracer-Taichi</a>
+          <a class="repo-link" href="https://github.com/yyt0823/Shadow-Mapping-OpenGL-Renderer">Shadow-Mapping-OpenGL-Renderer</a>
+          <a class="repo-link" href="https://github.com/yyt0823/Mesh-Simplification-Half-Edge-QEM">Mesh-Simplification-Half-Edge-QEM</a>
+          <a class="repo-link" href="https://github.com/yyt0823/3D-Rotation-Controllers">3D-Rotation-Controllers</a>
         </div>
-        <div class="field-gif">
-          <img src="https://raw.githubusercontent.com/yyt0823/Shadow-Mapping-OpenGL-Renderer/master/demo.gif" alt="Shadow Mapping demo">
-        </div>
-      </div>
-
-      <div class="field-entry">
-        <div class="field-body">
-          <h3>Game Development</h3>
-          <div class="courses">COMP 521 Modern Computer Games</div>
-          <div class="repos">
-            <a class="repo-link" href="https://github.com/yyt0823/unity-htn-ai">unity-htn-ai</a>
-            <a class="repo-link" href="https://github.com/yyt0823/unity-rvg-pathfinding">unity-rvg-pathfinding</a>
-            <a class="repo-link" href="https://github.com/yyt0823/unity-pinball-physics">unity-pinball-physics</a>
-            <a class="repo-link" href="https://github.com/yyt0823/unity-void-runner">unity-void-runner</a>
-            <a class="repo-link" href="https://github.com/yyt0823/love2d-pong">love2d-pong</a>
-            <a class="repo-link" href="https://github.com/yyt0823/games">games</a>
-          </div>
-        </div>
-        <div class="field-gif">
-          <img src="https://raw.githubusercontent.com/yyt0823/unity-htn-ai/main/throw.gif" alt="HTN AI demo">
+        <div class="field-gifs">
+          <img src="https://raw.githubusercontent.com/yyt0823/Shadow-Mapping-OpenGL-Renderer/master/demo.gif" alt="Shadow Mapping">
+          <img src="https://raw.githubusercontent.com/yyt0823/Mesh-Simplification-Half-Edge-QEM/main/demo1.gif" alt="Mesh Simplification">
+          <img src="https://raw.githubusercontent.com/yyt0823/Mesh-Simplification-Half-Edge-QEM/main/demo3.gif" alt="Mesh Simplification 3">
+          <img src="https://raw.githubusercontent.com/yyt0823/3D-Rotation-Controllers/master/demo.gif" alt="3D Rotation">
         </div>
       </div>
 
       <div class="field-entry">
-        <div class="field-body">
-          <h3>Systems &amp; Operating Systems</h3>
-          <div class="courses">COMP 206 Software Systems &nbsp;·&nbsp; COMP 273 Computer Systems &nbsp;·&nbsp; COMP 310 Operating Systems</div>
-          <div class="repos">
-            <a class="repo-link" href="https://github.com/yyt0823/unix-shell-kernel">unix-shell-kernel</a>
-            <a class="repo-link" href="https://github.com/yyt0823/mips-assembly-and-digital-logic">mips-assembly-and-digital-logic</a>
-            <a class="repo-link" href="https://github.com/yyt0823/CMD-BASH">CMD-BASH</a>
-          </div>
+        <h3>Game Development</h3>
+        <div class="courses">COMP 521 Modern Computer Games</div>
+        <div class="repos">
+          <a class="repo-link" href="https://github.com/yyt0823/unity-htn-ai">unity-htn-ai</a>
+          <a class="repo-link" href="https://github.com/yyt0823/unity-rvg-pathfinding">unity-rvg-pathfinding</a>
+          <a class="repo-link" href="https://github.com/yyt0823/unity-pinball-physics">unity-pinball-physics</a>
+          <a class="repo-link" href="https://github.com/yyt0823/unity-void-runner">unity-void-runner</a>
+          <a class="repo-link" href="https://github.com/yyt0823/love2d-pong">love2d-pong</a>
+          <a class="repo-link" href="https://github.com/yyt0823/games">games</a>
+        </div>
+        <div class="field-gifs">
+          <img src="https://raw.githubusercontent.com/yyt0823/unity-htn-ai/main/throw.gif" alt="HTN AI throw">
+          <img src="https://raw.githubusercontent.com/yyt0823/unity-htn-ai/main/pick_weapon_melee.gif" alt="HTN AI melee">
+          <img src="https://raw.githubusercontent.com/yyt0823/unity-rvg-pathfinding/main/demo.gif" alt="RVG Pathfinding">
+          <img src="https://raw.githubusercontent.com/yyt0823/unity-pinball-physics/main/demo.gif" alt="Pinball Physics">
+          <img src="https://raw.githubusercontent.com/yyt0823/unity-void-runner/main/stage1.gif" alt="Void Runner">
         </div>
       </div>
 
       <div class="field-entry">
-        <div class="field-body">
-          <h3>Concurrent Programming</h3>
-          <div class="courses">COMP 409 Concurrent Programming</div>
-          <div class="repos">
-            <a class="repo-link" href="https://github.com/yyt0823/Concurrent-Programming-Multithreaded-Image-Composer-and-LinkedList">Concurrent-Programming</a>
-          </div>
-        </div>
-        <div class="field-gif">
-          <img src="https://raw.githubusercontent.com/yyt0823/Concurrent-Programming-Multithreaded-Image-Composer-and-LinkedList/main/outputimage.png" alt="Multithreaded image output">
+        <h3>Systems &amp; Operating Systems</h3>
+        <div class="courses">COMP 206 Software Systems &nbsp;·&nbsp; COMP 273 Computer Systems &nbsp;·&nbsp; COMP 310 Operating Systems</div>
+        <div class="repos">
+          <a class="repo-link" href="https://github.com/yyt0823/unix-shell-kernel">unix-shell-kernel</a>
+          <a class="repo-link" href="https://github.com/yyt0823/mips-assembly-and-digital-logic">mips-assembly-and-digital-logic</a>
+          <a class="repo-link" href="https://github.com/yyt0823/CMD-BASH">CMD-BASH</a>
         </div>
       </div>
 
       <div class="field-entry">
-        <div class="field-body">
-          <h3>Software Design &amp; OOP</h3>
-          <div class="courses">COMP 303 Software Design</div>
-          <div class="repos">
-            <a class="repo-link" href="https://github.com/yyt0823/dns-lru-cache">dns-lru-cache</a>
-            <a class="repo-link" href="https://github.com/yyt0823/dns-cache-oop">dns-cache-oop</a>
-            <a class="repo-link" href="https://github.com/yyt0823/dns-cache-polymorphism">dns-cache-polymorphism</a>
-          </div>
+        <h3>Concurrent Programming</h3>
+        <div class="courses">COMP 409 Concurrent Programming</div>
+        <div class="repos">
+          <a class="repo-link" href="https://github.com/yyt0823/Concurrent-Programming-Multithreaded-Image-Composer-and-LinkedList">Concurrent-Programming</a>
+        </div>
+        <div class="field-gifs">
+          <img src="https://raw.githubusercontent.com/yyt0823/Concurrent-Programming-Multithreaded-Image-Composer-and-LinkedList/main/outputimage.png" alt="Multithreaded output">
         </div>
       </div>
 
       <div class="field-entry">
-        <div class="field-body">
-          <h3>Programming Languages &amp; Logic</h3>
-          <div class="courses">COMP 302 Programming Languages &amp; Paradigms &nbsp;·&nbsp; COMP 527 Logic and Computation &nbsp;·&nbsp; COMP 330 Theory of Computation</div>
-          <div class="repos">
-            <a class="repo-link" href="https://github.com/yyt0823/functional-programming-ocaml">functional-programming-ocaml</a>
-            <a class="repo-link" href="https://github.com/yyt0823/comp527-logic-and-computation">comp527-logic-and-computation</a>
-            <a class="repo-link" href="https://github.com/yyt0823/java-data-structures-and-algorithms">java-data-structures-and-algorithms</a>
-          </div>
+        <h3>Software Design &amp; OOP</h3>
+        <div class="courses">COMP 303 Software Design</div>
+        <div class="repos">
+          <a class="repo-link" href="https://github.com/yyt0823/dns-lru-cache">dns-lru-cache</a>
+          <a class="repo-link" href="https://github.com/yyt0823/dns-cache-oop">dns-cache-oop</a>
+          <a class="repo-link" href="https://github.com/yyt0823/dns-cache-polymorphism">dns-cache-polymorphism</a>
         </div>
       </div>
 
       <div class="field-entry">
-        <div class="field-body">
-          <h3>Machine Learning</h3>
-          <div class="courses">COMP 551 Applied Machine Learning</div>
-          <div class="repos">
-            <a class="repo-link" href="https://github.com/yyt0823/CNN_ODD_ONE_OUT">CNN_ODD_ONE_OUT</a>
-            <a class="repo-link" href="https://github.com/yyt0823/Logistic-Regression-Spam-Classifier">Logistic-Regression-Spam-Classifier</a>
-          </div>
+        <h3>Programming Languages &amp; Logic</h3>
+        <div class="courses">COMP 302 Programming Languages &amp; Paradigms &nbsp;·&nbsp; COMP 527 Logic and Computation &nbsp;·&nbsp; COMP 330 Theory of Computation</div>
+        <div class="repos">
+          <a class="repo-link" href="https://github.com/yyt0823/functional-programming-ocaml">functional-programming-ocaml</a>
+          <a class="repo-link" href="https://github.com/yyt0823/comp527-logic-and-computation">comp527-logic-and-computation</a>
+          <a class="repo-link" href="https://github.com/yyt0823/java-data-structures-and-algorithms">java-data-structures-and-algorithms</a>
         </div>
       </div>
 
       <div class="field-entry">
-        <div class="field-body">
-          <h3>Other</h3>
-          <div class="courses">CS50 &nbsp;·&nbsp; miscellaneous</div>
-          <div class="repos">
-            <a class="repo-link" href="https://github.com/yyt0823/cs50-projects">cs50-projects</a>
-          </div>
+        <h3>Machine Learning</h3>
+        <div class="courses">COMP 551 Applied Machine Learning</div>
+        <div class="repos">
+          <a class="repo-link" href="https://github.com/yyt0823/CNN_ODD_ONE_OUT">CNN_ODD_ONE_OUT</a>
+          <a class="repo-link" href="https://github.com/yyt0823/Logistic-Regression-Spam-Classifier">Logistic-Regression-Spam-Classifier</a>
+        </div>
+      </div>
+
+      <div class="field-entry">
+        <h3>Other</h3>
+        <div class="courses">CS50 &nbsp;·&nbsp; miscellaneous</div>
+        <div class="repos">
+          <a class="repo-link" href="https://github.com/yyt0823/cs50-projects">cs50-projects</a>
         </div>
       </div>
 
